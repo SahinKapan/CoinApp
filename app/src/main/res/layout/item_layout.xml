@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/coinIcon"
+                app:srcCompat = "@mipmap/ic_launcher_round"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:layout_marginLeft="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/section_name"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:id="@+id/coinSymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="BTC"
+                        android:fontFamily="sans-serif-thin"
+                        android:layout_marginBottom="8dp"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/section_price"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:text="$"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#071D55"/>
+
+                    <TextView
+                        android:id="@+id/coinPrice"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="10,000"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#071D55"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/section_bottom"
+                    android:layout_below="@+id/section_price"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/coinName"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Bitcoin"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#071D55"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/section_change"
+                    android:layout_below="@+id/section_price"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/coinChange"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="+0.02% (+$0.243)"
+                        android:fontFamily="sans-serif-thin"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#EE6B67"
+                        android:textSize="13dp"
+                        android:paddingTop="3dp"
+
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/OneChange"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/TwentyFourChange"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/SevenDayChange"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/ThirtyDayChange"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/VolumeTwentyFour"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/CirculatingSupply"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/MaximumSupply"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/MarketCap"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/MarketCapDominance"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

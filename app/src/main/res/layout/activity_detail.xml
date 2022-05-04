@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="3.5"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/symbolCoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/nameCoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bitcoin"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#071D55"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CURRENT PRICE"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#071D55"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/priceCoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$62,809.80"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1.2"
+            android:paddingLeft="15dp"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High:"
+            android:textAlignment="viewEnd"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/highPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="62,903.21"
+            android:textAlignment="textStart"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#82D685"
+            android:layout_weight="1.8"
+            android:paddingLeft="5dp"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/changeCoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$62,809.80"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#EE6B67"
+            android:layout_weight="1.2"
+            android:paddingLeft="15dp"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Low:"
+            android:textAlignment="viewEnd"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/lowPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="62,903.21"
+            android:textAlignment="textStart"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#EE6B67"
+            android:layout_weight="1.8"
+            android:paddingLeft="5dp"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 1h"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 24h"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/changeOneHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 1h Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/changeTwentyFourHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 24h Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 7d"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 30d"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/changeSevenDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 7d Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/changeThirtyDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Percent 30d Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volume 24h"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/volumeTwentyFourEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volume 24h Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Circulating Supply"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/circulatingSupplyEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Circulating Supply Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maximum Supply"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/maximumSupplyEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maximum Supply Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Cap"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/marketCapEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Cap Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Cap Dominance"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#071D55"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/marketCapDominanceEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Cap Dominance Edit"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#9C27B0"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
